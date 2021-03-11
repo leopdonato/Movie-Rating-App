@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { Rating } from 'src/app/shared/rating.model';
 
 @Component({
   selector: 'app-evaluete-movies',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EvalueteMoviesComponent implements OnInit {
 
-  constructor() { }
+  rating: Rating;
+
+  mock = {
+    script: 0,
+    photography: 0,
+    specialEffects: 0,
+    cast: 0
+  };
+
+  constructor(
+    private location: Location
+  ) { }
 
   ngOnInit(): void {
+    this.rating = this.mock;
+  }
+
+  cancel() {
+    this.location.back();
   }
 
 }

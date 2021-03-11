@@ -1,1 +1,91 @@
-<p>evaluete-movies works!</p>
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col-12 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2> Roteiro </h2>
+                    <hr />
+                    <p> Arrebentando arame, moto estralando, gil chamando pocah de Basculho, globo da morte trabaiando,
+                        karol agarrando o Bill, bebe chorando. Gaio de pau quebrando, moto estralando, gil chamando
+                        pocah de Basculho. Moto estralando tenénénénénénénénéné, cuiedeira passando por riba de
+                        sememente, bebe chorando. </p>
+                </div>
+                <div class="card-footer text-center">
+                    <ngb-rating [(rate)]="rating.script" [max]="5">
+                        <ng-template let-fill="fill" let-index="index">
+                            <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                        </ng-template>
+                    </ngb-rating>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2> Fotografia </h2>
+                    <hr />
+                    <div class="container-img">
+                        <img src="https://cdn.tlc-massive.com/shain/v1/dataservice/ResizeImage/$value?Format=%27jpg%27&Quality=85&ImageId=%27237619.jpg%27&ImageUrl=%27237619.jpg%27&EntityType=%27Item%27&EntityId=%2723572%27&device=web_browser&subscriptions=Subscriber&segmentationTags=GloboTvodMvp%2Cglobo&Width=360&Height=540"
+                            alt="banner">
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <ngb-rating [(rate)]="rating.photography" [max]="5">
+                        <ng-template let-fill="fill" let-index="index">
+                            <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                        </ng-template>
+                    </ngb-rating>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2> Efeitos especiais </h2>
+                    <hr />
+                    <p> Isso aqui ainda vai pegar fogo, cambio de trator engastaindo, menino correndo, isso aqui ainda
+                        vai pegar fogo, cambio de trator engastaindo, engrenagem enpenando. Aqueles bate boca, moto
+                        estralando, engrenagem enpenando. </p>
+                </div>
+                <div class="card-footer text-center">
+                    <ngb-rating [(rate)]="rating.specialEffects" [max]="5">
+                        <ng-template let-fill="fill" let-index="index">
+                            <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                        </ng-template>
+                    </ngb-rating>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2> Elenco </h2>
+                    <hr />
+                    <ul>
+                        <li> Maria </li>
+                        <li> James </li>
+                        <li> Joanderson </li>
+                    </ul>
+                </div>
+                <div class="card-footer text-center">
+                    <ngb-rating [(rate)]="rating.cast" [max]="5">
+                        <ng-template let-fill="fill" let-index="index">
+                            <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                        </ng-template>
+                    </ngb-rating>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12 col-md-6 mb-3">
+            <button type="button" class="btn btn-secondary btn-lg col-12 col-md-6 col-lg-4" (click)="cancel()">Cancelar</button>
+        </div>
+        <div class="col-12 col-md-6 mb-3">
+            <button type="button" class="btn btn-outline-dark btn-lg col-12 col-md-6 col-lg-4"
+                style="float: right">Salvar</button>
+        </div>
+    </div>
+</div>

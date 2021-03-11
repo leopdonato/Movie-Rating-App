@@ -6,7 +6,8 @@ import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { registerLocaleData } from '@angular/common';
-import localePt from '@angular/common/locales/pt'
+import localePt from '@angular/common/locales/pt';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 registerLocaleData(localePt, 'pt');
 
@@ -18,7 +19,8 @@ registerLocaleData(localePt, 'pt');
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CoreModule
+    CoreModule,
+    NgbModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
   bootstrap: [AppComponent]

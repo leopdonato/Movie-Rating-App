@@ -1,0 +1,36 @@
+ngb-rating::ng-deep {
+    span.sr-only {
+        visibility: hidden;
+    }
+}
+
+.star {
+    font-size: 1.5rem;
+    color: #b0c4de;
+}
+
+.filled,
+.filled.bad {
+    color: gold;
+}
+
+.card {
+    height: 100%;
+}
+
+.card-body {
+    p, li {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .container-img {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 20%;
+            @media(max-width: 1360px) {
+                width: 50%;
+            }
+        }
+    }
+}
