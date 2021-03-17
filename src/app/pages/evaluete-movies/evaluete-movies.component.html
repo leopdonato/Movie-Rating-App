@@ -5,10 +5,7 @@
                 <div class="card-body">
                     <h2> Roteiro </h2>
                     <hr />
-                    <p> Arrebentando arame, moto estralando, gil chamando pocah de Basculho, globo da morte trabaiando,
-                        karol agarrando o Bill, bebe chorando. Gaio de pau quebrando, moto estralando, gil chamando
-                        pocah de Basculho. Moto estralando tenénénénénénénénéné, cuiedeira passando por riba de
-                        sememente, bebe chorando. </p>
+                    <p> {{movie.plot}} </p>
                 </div>
                 <div class="card-footer text-center">
                     <ngb-rating [(rate)]="rating.script" [max]="5">
@@ -25,7 +22,7 @@
                     <h2> Fotografia </h2>
                     <hr />
                     <div class="container-img">
-                        <img src="https://cdn.tlc-massive.com/shain/v1/dataservice/ResizeImage/$value?Format=%27jpg%27&Quality=85&ImageId=%27237619.jpg%27&ImageUrl=%27237619.jpg%27&EntityType=%27Item%27&EntityId=%2723572%27&device=web_browser&subscriptions=Subscriber&segmentationTags=GloboTvodMvp%2Cglobo&Width=360&Height=540"
+                        <img [src]="movie.poster"
                             alt="banner">
                     </div>
                 </div>
@@ -45,9 +42,7 @@
                 <div class="card-body">
                     <h2> Efeitos especiais </h2>
                     <hr />
-                    <p> Isso aqui ainda vai pegar fogo, cambio de trator engastaindo, menino correndo, isso aqui ainda
-                        vai pegar fogo, cambio de trator engastaindo, engrenagem enpenando. Aqueles bate boca, moto
-                        estralando, engrenagem enpenando. </p>
+                    <p> {{movie.specialEffects}} </p>
                 </div>
                 <div class="card-footer text-center">
                     <ngb-rating [(rate)]="rating.specialEffects" [max]="5">
@@ -64,9 +59,7 @@
                     <h2> Elenco </h2>
                     <hr />
                     <ul>
-                        <li> Maria </li>
-                        <li> James </li>
-                        <li> Joanderson </li>
+                        <li *ngFor="let cast of movie.cast"> {{cast.name}} </li>
                     </ul>
                 </div>
                 <div class="card-footer text-center">
