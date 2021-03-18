@@ -1,4 +1,4 @@
-<div class="modal fade" tabindex="-1" id="feedback" data-backdrop="static" role="dialog" aria-labelledby="feedbackLabel" aria-hidden="true">
+<div class="modal fade" #modal tabindex="-1" id="feedback" data-backdrop="static" role="dialog" aria-labelledby="feedbackLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content bg-success text-white">
             <div class="modal-header">
@@ -11,3 +11,7 @@
         </div>
     </div>
 </div>
+
+<button #modalButton type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#feedback"
+    style="display: none;">
+</button>

@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="mt-3 back">
-        <button type="button" class="btn btn-link" (click)="cancel()">Voltar</button>
+        <button type="button" class="btn btn-link" (click)="finishAndBack('canceled')">Voltar</button>
     </div>
     <div class="row mt-4">
         <div class="col-12 col-md-6 mb-base">
@@ -77,11 +77,11 @@
     <div class="row">
         <div class="col-12 col-md-6 mb-3">
             <button type="button" class="btn btn-secondary btn-lg col-12 col-md-6 col-lg-4"
-                (click)="cancel()">Cancelar</button>
+                (click)="finishAndBack('canceled')">Cancelar</button>
         </div>
         <div class="col-12 col-md-6 mb-3">
             <button type="button" class="btn btn-outline-dark btn-lg col-12 col-md-6 col-lg-4"
-                (click)="submit()">Salvar</button>
+                (click)="finishAndBack('submit')">Salvar</button>
         </div>
     </div>
 </div>

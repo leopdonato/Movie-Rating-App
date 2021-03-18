@@ -33,13 +33,12 @@ export class EvalueteMoviesComponent implements OnInit {
     this.getMovie();
   }
 
-  cancel() {
-    this.location.back();
-  }
-
-  submit() {
-    let param = {status: 'success'}
-    this.router.navigate(['/pages/movieslist'], {state: param})
+  finishAndBack(param) {
+    let status;
+    if (param == 'submit')
+    status = {status: 'success'}
+    else status = {status: 'canceled'}
+    this.router.navigate(['/pages/movieslist'], {state: status})
   }
 
   getMovie() {
@@ -49,6 +48,7 @@ export class EvalueteMoviesComponent implements OnInit {
      ))
       .subscribe(response => {
         this.movie = response;
+        if (!this.movie.plot) this.location.back();
       }, error => {
         console.log(error)
       })
