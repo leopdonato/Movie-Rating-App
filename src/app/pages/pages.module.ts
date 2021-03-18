@@ -6,6 +6,7 @@ import { EvalueteMoviesComponent } from './evaluete-movies/evaluete-movies.compo
 import { MoviesListComponent } from './movies-list/movies-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LimitToPipe } from '../shared/pipes/limit-to.pipe';
+import { CoreModule } from '../core/core.module';
 
 
 
@@ -20,6 +21,7 @@ import { LimitToPipe } from '../shared/pipes/limit-to.pipe';
     CommonModule,
     PagesRoutingModule,
     NgbModule,
+    CoreModule
   ],
 })
 export class PagesModule { }

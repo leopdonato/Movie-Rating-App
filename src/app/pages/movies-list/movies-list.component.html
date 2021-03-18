@@ -1,8 +1,10 @@
 <div class="container-fluid">
     <div class="row mt-5">
-        <div class="col-12 col-md-4 col-lg-3" *ngFor="let movie of movies">
+        <div class="col-12 col-md-4 col-lg-3 mb-base" *ngFor="let movie of movies">
             <div class="card">
-                <img [src]="movie.poster" alt="banner">
+                <div class="img-container">
+                    <img [src]="movie.poster" alt="banner">
+                </div>
                 <div class="card-body">
                     <h5 class="card-title">{{movie.title }}</h5>
                     <span> {{movie.year}} | {{movie.length}} minutos</span>
@@ -18,3 +20,8 @@
         </div>
     </div>
 </div>
+<button #modalButton type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#feedback" style="display: none;">
+    Launch demo modal
+  </button>
+
+<app-feedback ></app-feedback>

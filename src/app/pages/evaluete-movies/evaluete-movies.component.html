@@ -1,6 +1,9 @@
 <div class="container-fluid">
-    <div class="row mt-5">
-        <div class="col-12 col-md-6">
+    <div class="mt-3 back">
+        <button type="button" class="btn btn-link" (click)="cancel()">Voltar</button>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12 col-md-6 mb-base">
             <div class="card">
                 <div class="card-body">
                     <h2> Roteiro </h2>
@@ -16,14 +19,13 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 mb-base">
             <div class="card">
                 <div class="card-body">
                     <h2> Fotografia </h2>
                     <hr />
                     <div class="container-img">
-                        <img [src]="movie.poster"
-                            alt="banner">
+                        <img [src]="movie.poster" alt="banner">
                     </div>
                 </div>
                 <div class="card-footer text-center">
@@ -36,8 +38,8 @@
             </div>
         </div>
     </div>
-    <div class="row mt-4">
-        <div class="col-12 col-md-6">
+    <div class="row">
+        <div class="col-12 col-md-6 mb-base">
             <div class="card">
                 <div class="card-body">
                     <h2> Efeitos especiais </h2>
@@ -53,7 +55,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 mb-base">
             <div class="card">
                 <div class="card-body">
                     <h2> Elenco </h2>
@@ -72,13 +74,14 @@
             </div>
         </div>
     </div>
-    <div class="row mt-4">
+    <div class="row">
         <div class="col-12 col-md-6 mb-3">
-            <button type="button" class="btn btn-secondary btn-lg col-12 col-md-6 col-lg-4" (click)="cancel()">Cancelar</button>
+            <button type="button" class="btn btn-secondary btn-lg col-12 col-md-6 col-lg-4"
+                (click)="cancel()">Cancelar</button>
         </div>
         <div class="col-12 col-md-6 mb-3">
             <button type="button" class="btn btn-outline-dark btn-lg col-12 col-md-6 col-lg-4"
-                style="float: right">Salvar</button>
+                (click)="submit()">Salvar</button>
         </div>
     </div>
 </div>

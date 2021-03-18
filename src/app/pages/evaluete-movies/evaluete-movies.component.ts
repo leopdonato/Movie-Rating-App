@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Rating } from 'src/app/shared/models/rating.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { Movies } from 'src/app/shared/models/movies.model';
 
@@ -25,6 +25,7 @@ export class EvalueteMoviesComponent implements OnInit {
   constructor(
     private location: Location,
     private activatedRoute: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -36,13 +37,17 @@ export class EvalueteMoviesComponent implements OnInit {
     this.location.back();
   }
 
+  submit() {
+    let param = {status: 'success'}
+    this.router.navigate(['/pages/movieslist'], {state: param})
+  }
+
   getMovie() {
    this.activatedRoute.paramMap
    .pipe(
      map(() => window.history.state
      ))
       .subscribe(response => {
-        console.log(response)
         this.movie = response;
       }, error => {
         console.log(error)

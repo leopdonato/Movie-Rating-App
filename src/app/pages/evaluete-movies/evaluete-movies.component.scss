@@ -23,10 +23,22 @@ ngb-rating::ng-deep {
         display: flex;
         justify-content: center;
         img {
-            width: 20%;
+            width: 25%;
             @media(max-width: 1360px) {
-                width: 50%;
+                width: 60%;
             }
         }
+    }
+}
+
+.btn-outline-dark {
+    float: right;
+}
+
+.back {
+    display: flex;
+    justify-content: flex-end;
+    button {
+        font-size: 20px
     }
 }
